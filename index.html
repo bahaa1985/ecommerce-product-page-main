@@ -18,11 +18,11 @@
 </head>
 <body class="w-full md:w-[80%] mx-auto bg-white font-[Kumbh_Sans] mix-blend-darken">
 
-  <navbar class="w-full flex justify-between items-center mix-blend-darken  px-2 md:px-0 py-6 mx-auto my-0 md:my-4 md:border-b border-[hsl(220, 14%, 75%)]">
+  <navbar class="w-full flex justify-between items-center mix-blend-darken  px-2 md:px-0 py-6 mx-auto my-0 md:my-4 md:border-b border-[hsl(223, 64%, 98%)]">
     <!--  -->
     <div class="w-[60%] flex justify-start md justify-between items-center gap-4">
       <div class="flex justify-center items-center block md:hidden">
-        <img id="menuIcon" class="size-4" src="./images//icon-menu.svg" alt="Menu Icon"/>
+        <img id="openMenu" class="size-4" src="./images//icon-menu.svg" alt="Menu Icon"/>
       </div>
       <div class="flex justify-center items-center text-3xl md:text-2xl font-[700] text-[#1a1e26]">
         sneakers
@@ -46,9 +46,9 @@
   <!--  -->
   <section id="mainSection" class="w-full md:w-[80%] mx-auto flex flex-col md:flex-row justify-between items-start  mix-blend-darken gap-8 my-0 md:my-16">
     <div class="relative top-0 left-0 w-full md:w-[45%] over-flow-hidden">
-      <img id="prevImg" class="block sm:hidden absolute w-full top-0 -left-[100%] border border-solid border-black"  />
+      <!-- <img id="prevImg" class="block sm:hidden absolute w-full top-0 -left-[100%] border border-solid border-black"  /> -->
       <img id="mainImage" class="w-full h-auto h-76 md:rounded-lg" alt="Sneaker Image"/>
-      <img id="nextImg" class="block sm:hidden absolute w-full top-0 left-[100%] border border-solid border-black"  />
+      <!-- <img id="nextImg" class="block sm:hidden absolute w-full top-0 left-[100%] border border-solid border-black"  /> -->
       <!-- carousel -->
       <div class="w-full absolute md:hidden top-1/2 -translate-y-1/2 flex justify-between items-center px-4">
         <div class="flex justify-center items-center size-8 rounded-full bg-white p-2">
@@ -59,18 +59,18 @@
         </div>
       </div>
       <!-- thumbnails -->
-      <div class="flex justify-between items-center mt-4">
+      <div id="thumbnails" class="flex justify-between items-center mt-4">
         <div class="hidden md:block w-full md:w-[20%] h-auto rounded-lg mt-4 hover:border-4 border-solid border-transparent hover:border-orange-500">
-          <img class="w-full h-auto rounded-lg hover:opacity-25 cursor-pointer" src="./images/image-product-1.jpg" alt="Sneaker Image"/>
+          <img class="w-full h-auto rounded-lg hover:opacity-25 cursor-pointer" src="./images/image-product-1-thumbnail.jpg" alt="Sneaker Image"/>
         </div>
         <div class="hidden md:block w-full md:w-[20%] h-auto rounded-lg mt-4 hover:border-4 border-solid border-transparent hover:border-orange-500">
-          <img class="w-full h-auto rounded-lg hover:opacity-25 cursor-pointer" src="./images/image-product-2.jpg" alt="Sneaker Image"/>
+          <img class="w-full h-auto rounded-lg hover:opacity-25 cursor-pointer" src="./images/image-product-2-thumbnail.jpg" alt="Sneaker Image"/>
         </div>
         <div class="hidden md:block w-full md:w-[20%] h-auto rounded-lg mt-4 hover:border-4 border-solid border-transparent hover:border-orange-500">
-          <img class="w-full h-auto rounded-lg hover:opacity-25 cursor-pointer" src="./images/image-product-3.jpg" alt="Sneaker Image"/>
+          <img class="w-full h-auto rounded-lg hover:opacity-25 cursor-pointer" src="./images/image-product-3-thumbnail.jpg" alt="Sneaker Image"/>
         </div>
         <div class="hidden md:block w-full md:w-[20%] h-auto rounded-lg mt-4 hover:border-4 border-solid border-transparent hover:border-orange-500">
-          <img class="w-full h-auto rounded-lg hover:opacity-25 cursor-pointer" src="./images/image-product-4.jpg" alt="Sneaker Image"/>
+          <img class="w-full h-auto rounded-lg hover:opacity-25 cursor-pointer" src="./images/image-product-4-thumbnail.jpg" alt="Sneaker Image"/>
         </div>
       </div>
     </div>
@@ -103,7 +103,7 @@ These low-profile sneakers are your perfect casual wear companion. Featuring a
     </div>
   </section>
   <!-- cart -->
-  <div id="cart" class="absolute top-24 sm:top-20 left-[50%] sm:left-[80%] -translate-x-[50%] xs:-translate-x-[30%] sm:-translate-x-[80%] md:-translate-x-[50%] w-[95%] sm:w-80 flex flex-col  bg-white rounded-lg shadow-lg">
+  <div id="cart" class="hidden absolute top-24 sm:top-20 left-[50%] sm:left-[80%] -translate-x-[50%] xs:-translate-x-[30%] sm:-translate-x-[80%] md:-translate-x-[50%] w-[95%] sm:w-80 flex flex-col  bg-white rounded-lg shadow-lg">
     <div class="flex justify-start items-center px-4 py-8 border-b border-slate-300 font-bold">Cart</div>
     <div class="my-4">
       <div class="flex justify-between items-center p-4">
@@ -121,7 +121,7 @@ These low-profile sneakers are your perfect casual wear companion. Featuring a
     <!-- sidebar -->
      <div id="sidebar" class="hidden absolute top-0 left-0 w-1/2 h-screen fixed inset-0 bg-white shadow-lg z-50">
       <div class="flex justify-between items-center p-4 ">
-        <img id="closeIcon" class="size-4 cursor-pointer" src="./images/icon-close.svg" alt="Close Icon"/>
+        <img id="closeMenu" class="size-4 cursor-pointer" src="./images/icon-close.svg" alt="Close Icon"/>
       </div>
       <ul class="p-4 space-y-4 font-bold">
         <li>Collections</li>
@@ -133,6 +133,26 @@ These low-profile sneakers are your perfect casual wear companion. Featuring a
 
      <!-- dark overlay -->
       <div id="overlay" class="hidden absolute top-0 left-0 w-full h-full fixed inset-0 bg-black opacity-75 z-40"></div>
+
+      <!-- lightbox -->
+       <div id="lightbox" class="w-1/2 h-screen flex flex-col justify-center items-center hidden absolute  left-1/2 -translate-x-1/2 inset-0 z-50">
+          <img id="closeIcon" class="size-6 cursor-pointer" src="./images/icon-close.svg" alt="Close Icon"/>
+          <img id="lightImg" class="w-full h-auto rounded-lg" src="./images/image-product-1.jpg" />
+          <div id="lightbox-thumbnails" class="flex justify-around items-center mt-4">
+            <!-- <div class="w-full md:w-[20%] h-auto rounded-lg mt-4 hover:border-4 border-solid border-transparent hover:border-orange-500"> -->
+              <img class="w-full md:w-[20%] h-auto rounded-lg mt-4 hover:border-4 border-solid border-transparent hover:border-orange-500 cursor-pointer" src="./images/image-product-1-thumbnail.jpg" alt="Sneaker Image"/>
+            <!-- </div> -->
+            <!-- <div class="w-full md:w-[20%] h-auto rounded-lg mt-4 hover:border-4 border-solid border-transparent hover:border-orange-500"> -->
+              <img class="w-full md:w-[20%] h-auto rounded-lg mt-4 hover:border-4 border-solid border-transparent hover:border-orange-500 cursor-pointer" src="./images/image-product-2-thumbnail.jpg" alt="Sneaker Image"/>
+            <!-- </div> -->
+            <!-- <div class="w-full md:w-[20%] h-auto rounded-lg mt-4 hover:border-4 border-solid border-transparent hover:border-orange-500"> -->
+              <img class="w-full md:w-[20%] h-auto rounded-lg mt-4 hover:border-4 border-solid border-transparent hover:border-orange-500 cursor-pointer" src="./images/image-product-3-thumbnail.jpg" alt="Sneaker Image"/>
+            <!-- </div> -->
+            <!-- <div class="w-full md:w-[20%] h-auto rounded-lg mt-4 hover:border-4 border-solid border-transparent hover:border-orange-500"> -->
+              <img class="w-full md:w-[20%] h-auto rounded-lg mt-4 hover:border-4 border-solid border-transparent hover:border-orange-500 cursor-pointer" src="./images/image-product-4-thumbnail.jpg" alt="Sneaker Image"/>
+            <!-- </div> -->
+        </div>
+       </div>
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
@@ -147,8 +167,8 @@ These low-profile sneakers are your perfect casual wear companion. Featuring a
       const cartIcon = document.getElementById('cartIcon');
       const cart = document.getElementById('cart');
       const sidebar = document.getElementById('sidebar');
-      const menuIcon = document.getElementById('menuIcon');
-      const closeIcon = document.getElementById('closeIcon');
+      const openMenu = document.getElementById('openMenu');
+      const closeMenu = document.getElementById('closeMenu');
       const overlay = document.getElementById('overlay');
       const mainImage = document.getElementById('mainImage');
       const prevImg = document.getElementById('prevImg');
@@ -161,8 +181,11 @@ These low-profile sneakers are your perfect casual wear companion. Featuring a
         './images/image-product-3.jpg',
         './images/image-product-4.jpg'
       ];
-      const images = document.querySelectorAll('#mainSection img');
+      const images = document.querySelectorAll('#thumbnails img');
+      const lightBoxImgs = document.querySelectorAll('#lightbox-thumbnails img');
 
+      console.log("lightBoxImgs", lightBoxImgs);
+      
       //
       // Set initial image source
       mainImage.src = imgsSrc[0];
@@ -173,7 +196,7 @@ These low-profile sneakers are your perfect casual wear companion. Featuring a
       });
 
       // Toggle sidebar visibility
-      menuIcon.addEventListener('click', () => {
+      openMenu.addEventListener('click', () => {
         sidebar.classList.toggle('hidden');
         document.getElementsByTagName('body')[0].classList.toggle('bg-salte-600')
         overlay.classList.toggle('hidden');
@@ -181,49 +204,51 @@ These low-profile sneakers are your perfect casual wear companion. Featuring a
         gsap.fromTo(sidebar, { x: '-100%' }, { x: '0', duration: 0.8, ease: 'power2.out' });
       });
 
-      closeIcon.addEventListener('click', () => {
-        sidebar.classList.add('hidden');
+      closeMenu.addEventListener('click', () => {
+        sidebar.classList.toggle('hidden');
         document.getElementsByTagName('body')[0].classList.toggle('bg-salte-600')
         overlay.classList.add('hidden');
       });
 
-      // Carousel using GSAP
-      prev.addEventListener('click', () => {
-        gsap.to(mainImage, { x: '-100%', duration: 0.5, ease: 'power2.out' });
-        gsap.to(prevImg, { x: '0', duration: 0.5, ease: 'power2.out' });
-        gsap.to(nextImg, { x: '200%', duration: 0.5, ease: 'power2.out' });
-        prevImg.src = mainImage.src;
-        // prevImg.classList.toggle('hidden');
-        mainImage.src = imgsSrc[(imgsSrc.indexOf(mainImage.src) - 1 + imgsSrc.length) % imgsSrc.length];
-        nextImg.src = imgsSrc[(imgsSrc.indexOf(mainImage.src) + 1) % imgsSrc.length];
-      });
-      next.addEventListener('click', () => {
-        gsap.to(mainImage, { x: '-100%', duration: 0.5, ease: 'power2.out' });
-        gsap.to(nextImg, { x: '0', duration: 0.5, ease: 'power2.out' });
-        gsap.to(prevImg, { x: '-200%', duration: 0.5, ease: 'power2.out' });
-        nextImg.src = mainImage.src;
-        // nextImg.classList.toggle('hidden');
-        mainImage.src = imgsSrc[(imgsSrc.indexOf(mainImage.src) + 1) % imgsSrc.length];
-        prevImg.src = imgsSrc[(imgsSrc.indexOf(mainImage.src) - 1 + imgsSrc.length) % imgsSrc.length];
+      //toggle lightbox visibility 
+      images.forEach(image => {
+        image.addEventListener('click', () => {          
+          document.getElementById('lightImg').src = image.src;
+          document.getElementById('lightbox').classList.remove('hidden');
+          overlay.classList.remove('hidden');
+        });
       });
 
-      // let currentIndex = 0;
-      // function updateImage() {
-      //   mainImage.src = imgsSrc[currentIndex];
-      //   // images.forEach((img, index) => {
-      //   //   img.classList.toggle('opacity-25', index !== currentIndex);
-      //   // });
-      // }
-      // previous.addEventListener('click', () => {
-      //   currentIndex = (currentIndex - 1 + imgsSrc.length) % imgsSrc.length;
-      //   updateImage();
-      // });
-      // next.addEventListener('click', () => {
-      //   currentIndex = (currentIndex + 1) % imgsSrc.length;
-      //   updateImage();
-      // });
-      // // Initial image load
-      // updateImage();  
+      // Set main image source on thumbnail click
+       lightBoxImgs.forEach((image, index) => {
+        image.addEventListener('click', () => {
+          // mainImage.src = imgsSrc[index];
+          // Update lightbox image source
+          document.getElementById('lightImg').src = imgsSrc[index];
+        });
+      });
+
+      //close lightbox
+      document.getElementById('closeIcon').addEventListener('click', () => {
+        document.getElementById('lightbox').classList.add('hidden');
+        overlay.classList.add('hidden');
+      });
+     
+
+      let currentIndex = 0;
+      
+      //initial image load
+      mainImage.src = imgsSrc[currentIndex];        
+      
+      previous.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + imgsSrc.length) % imgsSrc.length;
+        mainImage.src = imgsSrc[currentIndex]; 
+      });
+      next.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % imgsSrc.length;
+        mainImage.src = imgsSrc[currentIndex]; 
+      });
+       
 
     });
   </script>
