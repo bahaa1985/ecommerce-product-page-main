@@ -16,7 +16,7 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body class="w-full mx-auto h-screen bg-white font-[Kumbh_Sans] mix-blend-darken">
+<body class="w-full mx-auto h-auto bg-white font-[Kumbh_Sans] mix-blend-darken">
 
   <navbar class="absolute top-0 left-1/2  -translate-x-1/2 w-[80%] h-fit flex justify-between items-center mix-blend-darken  px-2 md:px-0  mx-auto my-0 md:my-4 md:border-b border-slate-300">
     <!--  -->
@@ -38,8 +38,8 @@
       </div>
     </div>
     <!-- cart and user -->
-    <div class="flex justify-between items-center space-x-4">
-      <span id="itemsQuantity" class="absolute top-0 left-0 bg-orange-500 text-slate-50">3</span>
+    <div class="relative flex justify-between items-center space-x-4">
+      <span id="itemsQuantity" class="hidden absolute top-0 left-1 flex justify-center items-center w-5 h-4 bg-orange-500 text-slate-50 text-sm rounded-lg">3</span>
       <img id="cartIcon" class="size-5 cursor-pointer" src="./images/icon-cart.svg" alt="Cart Icon"/>
       <img class="size-10 rounded-full hover:border-2 border-orange-500 cursor-pointer" src="./images/image-avatar.png" alt="Avatar Icon"/>
     </div>
@@ -61,7 +61,7 @@
         </div>
       </div>
       <!-- thumbnails -->
-      <div id="thumbnails" class="w-[80%] flex justify-between items-center mx-auto mt-4">
+      <div id="thumbnails" class="w-[90%] flex justify-between items-center mx-auto mt-4">
         <div class="hidden md:block w-full md:size-16 lg:size-20 rounded-lg mt-4 hover:border-4 border-solid border-transparent hover:border-orange-500">
           <img class="w-full h-auto rounded-lg hover:opacity-25 cursor-pointer" src="./images/image-product-1-thumbnail.jpg" alt="Sneaker Image"/>
         </div>
@@ -109,15 +109,8 @@ These low-profile sneakers are your perfect casual wear companion. Featuring a
     <div class="flex justify-start items-center px-4 py-4 border-b border-slate-300 font-bold">Cart</div>
     <div class="my-4">
       <div id="cartItems" class="flex flex-col justify-between items-center p-4">
-        <!-- <img class="size-12" src="./images/image-product-1-thumbnail.jpg" alt="Sneaker Thumbnail"/>
-        <div class="flex flex-col justify-start items-start">
-          <span class="text-slate-600 text-sm">Fall Limited Edition Sneakers</span>
-          <span class="text-slate-600">$125.00 x 3 <span class="text-slate-900 font-bold">$375.00</span></span>
-        </div> -->
-        Empty Cart
-        <!-- <img id="deleteCartItem" class="w-4 h-6 cursor-pointer" src="./images/icon-delete.svg" alt="Delete Icon"/> -->
+        Empty cart
       </div>
-      <!-- <button id="checkout" class="w-[90%] mx-auto flex justify-center items-center bg-orange-500 rounded-lg p-3 my-4 font-bold cursor-pointer">Checkout</button> -->
     </div>
     
   </div>
@@ -265,6 +258,7 @@ These low-profile sneakers are your perfect casual wear companion. Featuring a
      function emptyCart() {
         const cartItems = document.getElementById('cartItems');
         cartItems.innerHTML = 'Empty Cart';
+        document.getElementById('itemsQuantity').classList.add('hidden');
         // document.querySelector('button').disabled = true;
       }
 
@@ -283,6 +277,8 @@ These low-profile sneakers are your perfect casual wear companion. Featuring a
             </div>
             <button id="checkout" class="w-[90%] mx-auto flex justify-center items-center bg-orange-500 rounded-lg p-3 my-4 font-bold cursor-pointer">Checkout</button>
           `;
+          document.getElementById('itemsQuantity').innerText = quantity;
+          document.getElementById('itemsQuantity').classList.remove('hidden');
           cart.classList.remove('hidden');
           // delete cart item functionality
 
