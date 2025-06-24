@@ -16,39 +16,40 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body class="w-full md:w-[80%] mx-auto h-screen bg-white font-[Kumbh_Sans] mix-blend-darken">
+<body class="w-full mx-auto h-screen bg-white font-[Kumbh_Sans] mix-blend-darken">
 
-  <navbar class="w-full flex justify-between items-center mix-blend-darken  px-2 md:px-0  mx-auto my-0 md:my-4 md:border-b border-slate-300">
+  <navbar class="absolute top-0 left-1/2  -translate-x-1/2 w-[80%] h-fit flex justify-between items-center mix-blend-darken  px-2 md:px-0  mx-auto my-0 md:my-4 md:border-b border-slate-300">
     <!--  -->
-    <div class="w-[60%] h-16 flex justify-start md justify-between items-center gap-4">
+    <div class="w-[60%] h-20 flex justify-start md justify-between items-center gap-4">
       <div class="flex justify-center items-center block md:hidden">
         <img id="openMenu" class="size-4" src="./images//icon-menu.svg" alt="Menu Icon"/>
       </div>
-      <div class="flex justify-center items-center text-3xl md:text-2xl font-[700] text-[#1a1e26]">
+      <div class="h-full flex justify-center items-center text-3xl md:text-2xl font-[700] text-[#1a1e26] border-b-4 border-transparent">
         sneakers
       </div>
       <div class="hidden w-auto h-full md:block ml-8">
-        <ul class="w-full h-full flex justify-around items-center space-x-4 decoration-none text-slate-500 text-[16px]">
-          <li class="w-[20%] h-full flex justify-center items-center box-sizing hover:border-b-4 border-orange-500 cursor-pointer">Collections</li>
-          <li class="w-[20%] h-full flex justify-center items-center box-sizing hover:border-b-4 border-orange-500 cursor-pointer">Men</li>
-          <li class="w-[20%] h-full flex justify-center items-center box-sizing hover:border-b-4 border-orange-500 cursor-pointer">Women</li>
-          <li class="w-[20%] h-full flex justify-center items-center box-sizing hover:border-b-4 border-orange-500 cursor-pointer">About</li>
-          <li class="w-[20%] h-full flex justify-center items-center box-sizing hover:border-b-4 border-orange-500 cursor-pointer">Contact</li>
+        <ul class="w-full h-full flex justify-around items-center gap-4 decoration-none text-slate-500 text-[16px]">
+          <li class="w-[20%] h-full flex justify-center items-center box-border  border-b-4 border-transparent hover:border-orange-500 hover:text-slate-700 cursor-pointer">Collections</li>
+          <li class="w-[20%] h-full flex justify-center items-center box-border  border-b-4 border-transparent hover:border-orange-500 hover:text-slate-700 cursor-pointer">Men</li>
+          <li class="w-[20%] h-full flex justify-center items-center box-border  border-b-4 border-transparent hover:border-orange-500 hover:text-slate-700 cursor-pointer">Women</li>
+          <li class="w-[20%] h-full flex justify-center items-center box-border  border-b-4 border-transparent hover:border-orange-500 hover:text-slate-700 cursor-pointer">About</li>
+          <li class="w-[20%] h-full flex justify-center items-center box-border  border-b-4 border-transparent hover:border-orange-500 hover:text-slate-700 cursor-pointer">Contact</li>
         </ul>
       </div>
     </div>
     <!-- cart and user -->
     <div class="flex justify-between items-center space-x-4">
+      <span id="itemsQuantity" class="absolute top-0 left-0 bg-orange-500 text-slate-50">3</span>
       <img id="cartIcon" class="size-5 cursor-pointer" src="./images/icon-cart.svg" alt="Cart Icon"/>
       <img class="size-10 rounded-full hover:border-2 border-orange-500 cursor-pointer" src="./images/image-avatar.png" alt="Avatar Icon"/>
     </div>
   </navbar>
 
   <!--  -->
-  <section id="mainSection" class="w-full lg:w-[80%] mx-auto flex flex-col md:flex-row justify-between items-start  mix-blend-darken gap-8 my-0 md:my-16">
-    <div class="w-full md:w-[45%] my-auto over-flow-hidden">
+  <section id="mainSection" class="w-full md:w-[80%] lg:w-[70%] mx-auto flex flex-col md:flex-row justify-between items-start  mix-blend-darken gap-6 lg:gap-8 my-0 md:my-36">
+    <div class="w-full md:w-[45%] m-auto over-flow-hidden">
       <!-- <img id="prevImg" class="block sm:hidden absolute w-full top-0 -left-[100%] border border-solid border-black"  /> -->
-      <img id="mainImage" class="w-full h-auto h-76 md:rounded-lg" alt="Sneaker Image"/>
+      <img id="mainImage" class="w-full h-auto md:w-full lg:size-[400px] mx-auto md:rounded-lg" alt="Sneaker Image"/>
       <!-- <img id="nextImg" class="block sm:hidden absolute w-full top-0 left-[100%] border border-solid border-black"  /> -->
       <!-- carousel -->
       <div class="w-full absolute md:hidden top-1/2 -translate-y-1/2 flex justify-between items-center px-4">
@@ -60,17 +61,17 @@
         </div>
       </div>
       <!-- thumbnails -->
-      <div id="thumbnails" class="flex justify-between items-center mt-4">
-        <div class="hidden md:block w-full md:w-[20%] h-auto rounded-lg mt-4 hover:border-4 border-solid border-transparent hover:border-orange-500">
+      <div id="thumbnails" class="w-[80%] flex justify-between items-center mx-auto mt-4">
+        <div class="hidden md:block w-full md:size-16 lg:size-20 rounded-lg mt-4 hover:border-4 border-solid border-transparent hover:border-orange-500">
           <img class="w-full h-auto rounded-lg hover:opacity-25 cursor-pointer" src="./images/image-product-1-thumbnail.jpg" alt="Sneaker Image"/>
         </div>
-        <div class="hidden md:block w-full md:w-[20%] h-auto rounded-lg mt-4 hover:border-4 border-solid border-transparent hover:border-orange-500">
+        <div class="hidden md:block w-full md:size-16 lg:size-20 rounded-lg mt-4 hover:border-4 border-solid border-transparent hover:border-orange-500">
           <img class="w-full h-auto rounded-lg hover:opacity-25 cursor-pointer" src="./images/image-product-2-thumbnail.jpg" alt="Sneaker Image"/>
         </div>
-        <div class="hidden md:block w-full md:w-[20%] h-auto rounded-lg mt-4 hover:border-4 border-solid border-transparent hover:border-orange-500">
+        <div class="hidden md:block w-full md:size-16 lg:size-20 rounded-lg mt-4 hover:border-4 border-solid border-transparent hover:border-orange-500">
           <img class="w-full h-auto rounded-lg hover:opacity-25 cursor-pointer" src="./images/image-product-3-thumbnail.jpg" alt="Sneaker Image"/>
         </div>
-        <div class="hidden md:block w-full md:w-[20%] h-auto rounded-lg mt-4 hover:border-4 border-solid border-transparent hover:border-orange-500">
+        <div class="hidden md:block w-full md:size-16 lg:size-20 rounded-lg mt-4 hover:border-4 border-solid border-transparent hover:border-orange-500">
           <img class="w-full h-auto rounded-lg hover:opacity-25 cursor-pointer" src="./images/image-product-4-thumbnail.jpg" alt="Sneaker Image"/>
         </div>
       </div>
@@ -94,7 +95,7 @@ These low-profile sneakers are your perfect casual wear companion. Featuring a
       <div class="w-full flex flex-col md:flex-row justify-start items-center gap-4">
         <div class="w-full flex flex-row md:w-[35%]">
           <span id="decrease" class="w-1/3 flex justify-center items-center p-3 bg-slate-100 text-orange-500 rounded-l-lg cursor-pointer text-2xl font-bold hover:text-orange-300">-</span>
-          <span id="quantity" class="w-1/3 flex justify-center items-center p-3 bg-slate-1 font-bold00 text-black font-bold">0</span>
+          <span id="quantity" class="w-1/3 flex justify-center items-center p-3 bg-slate-100 font-bold00 text-black font-bold">0</span>
           <span id="increase" class="w-1/3 flex justify-center items-center p-3 bg-slate-100 text-orange-500 rounded-r-lg cursor-pointer text-2xl font-bold hover:text-orange-300">+</span>
         </div>
         <button id="addToCart" class="w-full md:w-[55%] p-3 flex justify-center gap-2 items-center bg-orange-500 rounded-lg cursor-pointer font-bold hover:bg-orange-300">
