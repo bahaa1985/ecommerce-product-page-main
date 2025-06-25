@@ -24,18 +24,20 @@
       <div class="flex justify-center items-center block md:hidden">
         <img id="openMenu" class="size-4" src="./images//icon-menu.svg" alt="Menu Icon"/>
       </div>
-      <span class="h-full flex justify-center items-center font-[Kumbh_Sans] text-3xl md:text-2xl font-[700] text-[#1a1e26] border-b-4 border-transparent">
-        sneakers
-      </span>
-      <div class="hidden w-auto h-full md:block ml-8">
-        <ul class="w-full h-full flex justify-around items-center gap-4 decoration-none text-slate-400 text-[16px]">
-          <li class="w-[20%] h-full flex justify-center items-center box-border  border-b-4 border-transparent hover:border-orange-500 hover:text-slate-700 cursor-pointer">Collections</li>
-          <li class="w-[20%] h-full flex justify-center items-center box-border  border-b-4 border-transparent hover:border-orange-500 hover:text-slate-700 cursor-pointer">Men</li>
-          <li class="w-[20%] h-full flex justify-center items-center box-border  border-b-4 border-transparent hover:border-orange-500 hover:text-slate-700 cursor-pointer">Women</li>
-          <li class="w-[20%] h-full flex justify-center items-center box-border  border-b-4 border-transparent hover:border-orange-500 hover:text-slate-700 cursor-pointer">About</li>
-          <li class="w-[20%] h-full flex justify-center items-center box-border  border-b-4 border-transparent hover:border-orange-500 hover:text-slate-700 cursor-pointer">Contact</li>
-        </ul>
-      </div>
+      <!-- logo -->
+       <div class="flex justify-start items-center w-full h-full">
+          <img src="./images/logo.svg" alt="Sneakers Company Logo" class="w-24 h-auto my-auto cursor-pointer ox-border  border-b-4 border-transparent"/>      
+          <div class="hidden w-auto h-full md:block ml-8">
+            <ul class="w-full h-full flex justify-around items-center py-auto gap-4 decoration-none text-slate-400 text-[14px]">
+              <li class="w-[20%] h-full flex justify-center items-center box-border  border-b-4 border-transparent hover:border-orange-500 hover:text-slate-700 cursor-pointer">Collections</li>
+              <li class="w-[20%] h-full flex justify-center items-center box-border  border-b-4 border-transparent hover:border-orange-500 hover:text-slate-700 cursor-pointer">Men</li>
+              <li class="w-[20%] h-full flex justify-center items-center box-border  border-b-4 border-transparent hover:border-orange-500 hover:text-slate-700 cursor-pointer">Women</li>
+              <li class="w-[20%] h-full flex justify-center items-center box-border  border-b-4 border-transparent hover:border-orange-500 hover:text-slate-700 cursor-pointer">About</li>
+              <li class="w-[20%] h-full flex justify-center items-center box-border  border-b-4 border-transparent hover:border-orange-500 hover:text-slate-700 cursor-pointer">Contact</li>
+            </ul>
+          </div>
+       </div>
+      
     </div>
     <!-- cart and user -->
     <div class="relative flex justify-between items-center space-x-4 lg:space-x-10">
@@ -108,7 +110,7 @@ These low-profile sneakers are your perfect casual wear companion. Featuring a
     </div>
   </section>
   <!-- cart -->
-  <div id="cart" class="hidden absolute top-24 sm:top-20 left-[50%] sm:left-[80%] -translate-x-[50%] xs:-translate-x-[30%] sm:-translate-x-[80%] md:-translate-x-[50%] w-[95%] sm:w-80 flex flex-col  bg-white rounded-lg shadow-xl">
+  <div id="cart" class="hidden absolute top-24 sm:top-20 left-[50%] sm:left-[80%] -translate-x-[50%] xs:-translate-x-[30%] sm:-translate-x-[80%] md:-translate-x-[50%] w-[95%] md:w-80 flex flex-col  bg-white rounded-lg shadow-xl">
     <div class="flex justify-start items-center px-4 py-4 border-b border-slate-300 font-bold">Cart</div>
     <div class="my-4">
       <div id="cartItems" class="flex flex-col justify-between items-center px-2">
@@ -118,7 +120,7 @@ These low-profile sneakers are your perfect casual wear companion. Featuring a
     
   </div>
     <!-- sidebar -->
-     <div id="sidebar" class="hidden absolute top-0 left-0 w-1/2 h-screen fixed inset-0 bg-white shadow-lg z-50">
+     <div id="sidebar" class="top-0 -left-1/2 w-1/2 h-screen fixed inset-0 bg-white shadow-lg z-100">
       <div class="flex justify-between items-center p-4 ">
         <img id="closeMenu" class="size-4 cursor-pointer" src="./images/icon-close.svg" alt="Close Icon"/>
       </div>

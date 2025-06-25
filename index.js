@@ -145,16 +145,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Toggle sidebar visibility
       openMenu.addEventListener('click', () => {
-        sidebar.classList.toggle('hidden');
+        // sidebar.classList.toggle('hidden');
         document.getElementsByTagName('body')[0].classList.toggle('bg-salte-600')
+         // GSAP animation for sidebar
+        gsap.fromTo(sidebar, { x: -sidebar.clientWidth/2 }, { x: '100%', duration: 0.5, ease: 'power2.out' });
         overlay.classList.toggle('hidden');
-        // GSAP animation for sidebar
-        gsap.fromTo(sidebar, { x: '-100%' }, { x: '0', duration: 0.8, ease: 'power2.out' });
+       
       });
 
-      closeMenu.addEventListener('click', () => {
-        sidebar.classList.toggle('hidden');
+      closeMenu.addEventListener('click', () => {        
         document.getElementsByTagName('body')[0].classList.toggle('bg-salte-600')
+        gsap.fromTo(sidebar, { x: '100%' }, { x: -sidebar.clientWidth/2, duration: 0.5, ease: 'power2.in' });
+        // sidebar.classList.toggle('hidden');
         overlay.classList.add('hidden');
       });
 
@@ -171,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (quantity > 0) {
           const cartItems = document.getElementById('cartItems');
           cartItems.innerHTML = `
-            <div class="flex justify-between items-center p-2 gap-2">
+            <div class="w-full flex justify-between items-center p-2 gap-2">
               <img class="size-12 rounded-md" src="./images/image-product-1-thumbnail.jpg" alt="Sneaker Thumbnail"/>
               <div class="flex flex-col justify-start items-start">
                 <span class="text-slate-600 text-sm">Fall Limited Edition Sneakers</span>
