@@ -24,11 +24,11 @@
       <div class="flex justify-center items-center block md:hidden">
         <img id="openMenu" class="size-4" src="./images//icon-menu.svg" alt="Menu Icon"/>
       </div>
-      <div class="h-full flex justify-center items-center text-3xl md:text-2xl font-[700] text-[#1a1e26] border-b-4 border-transparent">
+      <span class="h-full flex justify-center items-center font-[Kumbh_Sans] text-3xl md:text-2xl font-[700] text-[#1a1e26] border-b-4 border-transparent">
         sneakers
-      </div>
+      </span>
       <div class="hidden w-auto h-full md:block ml-8">
-        <ul class="w-full h-full flex justify-around items-center gap-4 decoration-none text-slate-500 text-[16px]">
+        <ul class="w-full h-full flex justify-around items-center gap-4 decoration-none text-slate-400 text-[16px]">
           <li class="w-[20%] h-full flex justify-center items-center box-border  border-b-4 border-transparent hover:border-orange-500 hover:text-slate-700 cursor-pointer">Collections</li>
           <li class="w-[20%] h-full flex justify-center items-center box-border  border-b-4 border-transparent hover:border-orange-500 hover:text-slate-700 cursor-pointer">Men</li>
           <li class="w-[20%] h-full flex justify-center items-center box-border  border-b-4 border-transparent hover:border-orange-500 hover:text-slate-700 cursor-pointer">Women</li>
@@ -38,7 +38,7 @@
       </div>
     </div>
     <!-- cart and user -->
-    <div class="relative flex justify-between items-center space-x-4">
+    <div class="relative flex justify-between items-center space-x-4 md:space-x-10">
       <span id="itemsQuantity" class="hidden absolute top-0 left-1 flex justify-center items-center w-5 h-4 bg-orange-500 text-slate-50 text-sm rounded-lg">3</span>
       <img id="cartIcon" class="size-5 cursor-pointer" src="./images/icon-cart.svg" alt="Cart Icon"/>
       <img class="size-10 rounded-full hover:border-2 border-orange-500 cursor-pointer" src="./images/image-avatar.png" alt="Avatar Icon"/>
@@ -49,17 +49,20 @@
   <section id="mainSection" class="w-full md:w-[80%] lg:w-[70%] mx-auto flex flex-col md:flex-row justify-between items-start  mix-blend-darken gap-6 lg:gap-8 my-0 mt-20 md:mt-36 md:mb-6">
     <div class="w-full md:w-[50%] m-auto over-flow-hidden">
       <!-- <img id="prevImg" class="block sm:hidden absolute w-full top-0 -left-[100%] border border-solid border-black"  /> -->
-      <img id="mainImage" class="w-full md:max-w-[320px] md:max-h-[320px]  mx-auto md:rounded-xl" alt="Sneaker Image"/>
-      <!-- <img id="nextImg" class="block sm:hidden absolute w-full top-0 left-[100%] border border-solid border-black"  /> -->
-      <!-- carousel -->
-      <div class="w-full absolute md:hidden top-1/2 -translate-y-1/2 flex justify-between items-center px-4">
-        <div class="flex justify-center items-center size-8 rounded-full bg-white p-2">
-          <img id="previous" class="size-2 mx-auto cursor-pointer" src="./images/icon-previous.svg" alt="Previous Icon"/>
-        </div>
-        <div class="flex justify-center items-center size-8 rounded-full bg-white p-2">
-          <img id="next" class="size-2 mx-auto cursor-pointer" src="./images/icon-next.svg" alt="Next Icon"/>
+      <div class="w-full h-auto relative flex justify-center items-center">
+        <img id="mainImage" class="w-full md:max-w-[320px] md:max-h-[320px]  mx-auto md:rounded-xl" alt="Sneaker Image"/>
+        <!-- <img id="nextImg" class="block sm:hidden absolute w-full top-0 left-[100%] border border-solid border-black"  /> -->
+        <!-- carousel -->
+        <div class="w-[95%] absolute md:hidden top-1/2 -translate-y-1/2 mx-auto flex justify-between items-center">
+          <div class="flex justify-center items-center size-8 rounded-full bg-white p-2">
+            <img id="previous" class="size-2 mx-auto cursor-pointer" src="./images/icon-previous.svg" alt="Previous Icon"/>
+          </div>
+          <div class="flex justify-center items-center size-8 rounded-full bg-white p-2">
+            <img id="next" class="size-2 mx-auto cursor-pointer" src="./images/icon-next.svg" alt="Next Icon"/>
+          </div>
         </div>
       </div>
+      
       <!-- thumbnails -->
       <div id="thumbnails" class="w-full max-w-[320px] flex justify-between items-center mx-auto">
         <div class="hidden md:block size-16 rounded-lg mt-4 hover:border-4 border-solid border-transparent hover:border-orange-500">
@@ -132,8 +135,7 @@ These low-profile sneakers are your perfect casual wear companion. Featuring a
 
       <!-- lightbox -->
        <div id="lightbox" class="size-[400px] flex flex-col justify-center items-center hidden absolute top-[25%]  left-1/2 -translate-x-1/2 -translate-y-[12%] inset-0 z-50">
-        <svg id="closeIcon" width="14" height="15" xmlns="http://www.w3.org/2000/svg" class="absolute -top-20 right-0 cursor-pointer" style="fill: #ff6900;"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#69707D" fill-rule="evenodd"/></svg>  
-        <!-- <img id="closeIcon" class="size-6 cursor-pointer" src="./images/icon-close.svg" alt="Close Icon"/> -->
+        <svg id="closeIcon" width="18" height="18" xmlns="http://www.w3.org/2000/svg" class="absolute -top-20 right-0 cursor-pointer"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#69707D" fill-rule="evenodd"/></svg> 
           <div class="w-full h-auto relative flex justify-center items-center">
             <img id="lightImg" class="w-auto h-auto max-w-[400px] max-h-[400px] rounded-xl" src="./images/image-product-1.jpg" />
             <!-- carousel -->
@@ -147,16 +149,12 @@ These low-profile sneakers are your perfect casual wear companion. Featuring a
             </div>
           </div>
           
-          <div id="lightbox-thumbnails" class="w-[80%] flex justify-between items-center mt-4">
-        
-              <img class="w-full md:w-16 xl:size-24 rounded-lg mt-4 hover:border-4 border-solid border-transparent hover:border-orange-500 cursor-pointer" src="./images/image-product-1-thumbnail.jpg" alt="Sneaker Image"/>
-         
-              <img class="w-full md:w-16 xl:size-24 rounded-lg mt-4 hover:border-4 border-solid border-transparent hover:border-orange-500 cursor-pointer" src="./images/image-product-2-thumbnail.jpg" alt="Sneaker Image"/>
-           
-              <img class="w-full md:w-16 xl:size-24 rounded-lg mt-4 hover:border-4 border-solid border-transparent hover:border-orange-500 cursor-pointer" src="./images/image-product-3-thumbnail.jpg" alt="Sneaker Image"/>
-          
-              <img class="w-full md:w-16 xl:size-24 rounded-lg mt-4 hover:border-4 border-solid border-transparent hover:border-orange-500 cursor-pointer" src="./images/image-product-4-thumbnail.jpg" alt="Sneaker Image"/>
-        </div>
+          <div id="lightbox-thumbnails" class="w-[80%] flex justify-between items-center mt-4">        
+              <img class="w-full md:w-16 xl:size-24 rounded-lg hover:border-4  hover:border-orange-500 cursor-pointer" src="./images/image-product-1-thumbnail.jpg" alt="Sneaker Image"/>         
+              <img class="w-full md:w-16 xl:size-24 rounded-lg hover:border-4  hover:border-orange-500 cursor-pointer" src="./images/image-product-2-thumbnail.jpg" alt="Sneaker Image"/>           
+              <img class="w-full md:w-16 xl:size-24 rounded-lg hover:border-4  hover:border-orange-500 cursor-pointer" src="./images/image-product-3-thumbnail.jpg" alt="Sneaker Image"/>          
+              <img class="w-full md:w-16 xl:size-24 rounded-lg hover:border-4  hover:border-orange-500 cursor-pointer" src="./images/image-product-4-thumbnail.jpg" alt="Sneaker Image"/>
+          </div>
        </div>
 
   <div class="attribution">
@@ -165,176 +163,7 @@ These low-profile sneakers are your perfect casual wear companion. Featuring a
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const navbar = document.getElementsByTagName('navbar')[0];
-      const section = document.getElementById('mainSection');
-      const cartIcon = document.getElementById('cartIcon');
-      const cart = document.getElementById('cart');
-      const sidebar = document.getElementById('sidebar');
-      const openMenu = document.getElementById('openMenu');
-      const closeMenu = document.getElementById('closeMenu');
-      const overlay = document.getElementById('overlay');
-      const mainImage = document.getElementById('mainImage');
-      const prevImg = document.getElementById('prevImg');
-      const nextImg = document.getElementById('nextImg');
-      const prev = document.getElementById('previous');
-      const next = document.getElementById('next');
-      const imgsSrc = [
-        './images/image-product-1.jpg',
-        './images/image-product-2.jpg',
-        './images/image-product-3.jpg',
-        './images/image-product-4.jpg'
-      ];
-      const images = document.querySelectorAll('#thumbnails img');
-      const lightBoxImgs = document.querySelectorAll('#lightbox-thumbnails img');
-
-      console.log("lightBoxImgs", lightBoxImgs);
-      
-      //
-      // Set initial image source
-      mainImage.src = imgsSrc[0];
-      
-      // Toggle cart visibility
-      cartIcon.addEventListener('click', () => {
-        cart.classList.toggle('hidden');
-      });
-
-      // Toggle sidebar visibility
-      openMenu.addEventListener('click', () => {
-        sidebar.classList.toggle('hidden');
-        document.getElementsByTagName('body')[0].classList.toggle('bg-salte-600')
-        overlay.classList.toggle('hidden');
-        // GSAP animation for sidebar
-        gsap.fromTo(sidebar, { x: '-100%' }, { x: '0', duration: 0.8, ease: 'power2.out' });
-      });
-
-      closeMenu.addEventListener('click', () => {
-        sidebar.classList.toggle('hidden');
-        document.getElementsByTagName('body')[0].classList.toggle('bg-salte-600')
-        overlay.classList.add('hidden');
-      });
-
-      //toggle lightbox visibility 
-      images.forEach(image => {
-        image.addEventListener('click', () => {          
-          // document.getElementById('lightImg').src = image.src;
-          document.getElementById('lightbox').classList.remove('hidden');
-          overlay.classList.remove('hidden');
-        });
-      });
-
-      // Set main image source on thumbnail click
-       lightBoxImgs.forEach((image, index) => {
-        image.addEventListener('click', () => {
-          // mainImage.src = imgsSrc[index];
-          // Update lightbox image source
-          document.getElementById('lightImg').src = imgsSrc[index];
-        });
-      });
-
-      // Set lightbox carousel functionality
-      const lightImg = document.getElementById('lightImg'); 
-      const prevLightImg = document.getElementById('prevLightImg');
-      const nextLightImg = document.getElementById('nextLightImg');
-      const prevSVG = document.getElementById('prevSVG');
-      const nextSVG = document.getElementById('nextSVG');
-
-      let lightboxCurrentIndex = 0;
-      //initial lightbox image load
-      lightImg.src = imgsSrc[lightboxCurrentIndex];
-      prevLightImg.addEventListener('click', () => {
-        lightboxCurrentIndex = (lightboxCurrentIndex - 1 + imgsSrc.length) % imgsSrc.length;
-        lightImg.src = imgsSrc[lightboxCurrentIndex];
-      });
-      prevLightImg.addEventListener('mouseover', () => {
-        prevSVG.style.stroke= '#ff6900';
-      });
-      prevLightImg.addEventListener('mouseout', () => {
-        prevSVG.style.stroke = '#1D2026';
-      });
-      nextLightImg.addEventListener('click', () => {
-        lightboxCurrentIndex = (lightboxCurrentIndex + 1) % imgsSrc.length;
-        lightImg.src = imgsSrc[lightboxCurrentIndex];
-      });
-      prevLightImg.addEventListener('mouseout', () => {
-        prevSVG.style.stroke = '#1D2026';
-      });
-      nextLightImg.addEventListener('mouseover', () => {
-        nextSVG.style.stroke = '#ff6900';
-      });
-      //close lightbox
-      document.getElementById('closeIcon').addEventListener('click', () => {
-        document.getElementById('lightbox').classList.add('hidden');
-        overlay.classList.add('hidden');
-      });
-     
-
-      let currentIndex = 0;
-      
-      //initial image load
-      mainImage.src = imgsSrc[currentIndex];        
-      
-      previous.addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + imgsSrc.length) % imgsSrc.length;
-        mainImage.src = imgsSrc[currentIndex]; 
-      });
-
-      next.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % imgsSrc.length;
-        mainImage.src = imgsSrc[currentIndex]; 
-      });
-       
-      // set qunatity functionality
-      let quantity = 0;
-      document.getElementById('increase').addEventListener('click', () => {
-          quantity++;
-           document.getElementById('quantity').innerText = quantity;
-        })
-       document.getElementById('decrease').addEventListener('click', () => {
-        if (quantity > 0) {
-          quantity--;
-           document.getElementById('quantity').innerText = quantity;
-        }
-      });
-     
-      // empty cart functionality
-     function emptyCart() {
-        const cartItems = document.getElementById('cartItems');
-        cartItems.innerHTML = 'Empty Cart';
-        document.getElementById('itemsQuantity').classList.add('hidden');
-        // document.querySelector('button').disabled = true;
-      }
-
-      // set add to cart functionality
-      document.querySelector('#addToCart').addEventListener('click', () => {
-        if (quantity > 0) {
-          const cartItems = document.getElementById('cartItems');
-          cartItems.innerHTML = `
-            <div class="flex justify-between items-center p-2 gap-2">
-              <img class="size-12 rounded-md" src="./images/image-product-1-thumbnail.jpg" alt="Sneaker Thumbnail"/>
-              <div class="flex flex-col justify-start items-start">
-                <span class="text-slate-600 text-sm">Fall Limited Edition Sneakers</span>
-                <span class="text-slate-600">$125.00 x ${quantity} <span class="text-slate-900 font-bold">$${125 * quantity}.00</span></span>
-              </div>
-              <img id="deleteCartItem" class="w-4 h-4 cursor-pointer" src="./images/icon-delete.svg" alt="Delete Icon"/>
-            </div>
-            <button id="checkout" class="w-[90%] mx-auto flex justify-center items-center bg-orange-500 rounded-lg p-3 my-4 font-bold cursor-pointer">Checkout</button>
-          `;
-          document.getElementById('itemsQuantity').innerText = quantity;
-          document.getElementById('itemsQuantity').classList.remove('hidden');
-          cart.classList.remove('hidden');
-          // delete cart item functionality
-
-    document.getElementById('deleteCartItem').addEventListener('click',emptyCart);
-    document.getElementById('checkout').addEventListener('click',emptyCart);
-        }
-      });
-
-      
-
-    });
-
+  <script src="index.js">
     
   </script>
 </body>
