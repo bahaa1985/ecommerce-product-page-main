@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-      const navbar = document.getElementsByTagName('navbar')[0];
       const section = document.getElementById('mainSection');
       const cartIcon = document.getElementById('cartIcon');
       const cart = document.getElementById('cart');
@@ -115,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
       //initial image load
       mainImage.src = imgsSrc[currentIndex];        
       
-      previous.addEventListener('click', () => {
+      prev.addEventListener('click', () => {
         currentIndex = (currentIndex - 1 + imgsSrc.length) % imgsSrc.length;
         mainImage.src = imgsSrc[currentIndex]; 
       });
